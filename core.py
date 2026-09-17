@@ -8,6 +8,14 @@ class MeraList:
         # create a C type arrary with size = self.size
         self.A = self.__make_array(self.size)
 
+    def __str__(self):
+        result = ''
+        for i in range(self.n):
+            result = result + str(self.A[i]) + ','
+
+        return '[' + result[:-1] + ']'              #[:-1] removes the last ,
+            
+
     def __len__(self):
         return self.n
 
@@ -42,5 +50,8 @@ L = MeraList()
 L.append('Hello')
 L.append(2)
 L.append(True)
+
+# test print
+print(L)
 
 print(type(L), len(L))
