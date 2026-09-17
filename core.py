@@ -16,6 +16,13 @@ class MeraList:
         return '[' + result[:-1] + ']'              #[:-1] removes the last ,
             
 
+    def __getitem__(self, index):
+        if 0 <= index < self.n:
+            return self.A[index]
+        else:
+            return 'IndexError: Index out of range'
+
+
     def __len__(self):
         return self.n
 
@@ -53,5 +60,9 @@ L.append(True)
 
 # test print
 print(L)
+
+# test indexing
+print(L[0])
+print(L[5]) 
 
 print(type(L), len(L))
