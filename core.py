@@ -47,6 +47,12 @@ class MeraList:
         self.n = 0
         self.size = 1
 
+    # Finds the index
+    def find(self,find):
+        for i in range(len(self.A)):
+            if find == self.A[i]:
+                print(i)
+
     def __resize(self, new_capacity):
         # create a new array with new capacity
         B = self.__make_array(new_capacity) # B is an array double the size of A
@@ -84,3 +90,17 @@ print(L[0])
 print(L[5]) 
 
 print(type(L), len(L))
+
+print("Test find")
+print("---------")
+
+F = MeraList()
+
+F.append(11)
+F.append(22)
+F.append(33)
+F.append(44)
+
+print(F)
+
+F.find(11)
