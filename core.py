@@ -48,10 +48,12 @@ class MeraList:
         self.size = 1
 
     # Finds the index
-    def find(self,find):
-        for i in range(len(self.A)):
-            if find == self.A[i]:
-                print(i)
+    def find(self,item):
+        for i in range(self.n):
+            if self.A[i] == item:
+                return i
+
+        return "ValueError: Not in list"
 
     def __resize(self, new_capacity):
         # create a new array with new capacity
@@ -103,4 +105,4 @@ F.append(44)
 
 print(F)
 
-F.find(11)
+print(F.find(55))
