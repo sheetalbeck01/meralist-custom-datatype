@@ -73,7 +73,8 @@ L.append(True)
 # test pop
 L.pop()
 
-
+# test clear
+L.clear()
 
 # test print
 print(L)
