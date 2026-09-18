@@ -42,6 +42,10 @@ class MeraList:
         print(self.A[self.n-1])
         self.n = self.n -1
 
+    def clear(self):
+
+        self.n = 0
+        self.size = 1
 
     def __resize(self, new_capacity):
         # create a new array with new capacity
@@ -68,6 +72,9 @@ L.append(True)
 
 # test pop
 L.pop()
+
+# test clear
+L.clear()
 
 # test print
 print(L)
