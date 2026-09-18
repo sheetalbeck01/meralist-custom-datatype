@@ -66,6 +66,9 @@ L.append('Hello')
 L.append(2)
 L.append(True)
 
+# test pop
+L.pop()
+
 # test print
 print(L)
 
